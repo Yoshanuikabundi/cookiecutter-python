@@ -1,5 +1,8 @@
 """Provide the primary functions."""
 
+__all__ = [
+    "canvas",
+]
 
 def canvas(with_attribution=True):
     """
