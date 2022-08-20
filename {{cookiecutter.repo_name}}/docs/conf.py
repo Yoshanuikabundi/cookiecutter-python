@@ -53,9 +53,35 @@ extensions = [
 ]
 
 autosummary_generate = True
+autosummary_imported_members = True
+autosummary_ignore_module_all = False
+autosummary_context = {
+    # Modules to exclude from API docs
+    "exclude_modules": [
+        "{{cookiecutter.repo_name}}.tests",
+    ]
+}
+
+autodoc_default_options = {
+    "member-order": "alphabetical",
+    "show-inheritance": True,
+}
+autodoc_preserve_defaults = True
+autodoc_inherit_docstrings = False
+autodoc_typehints_format = "short"
+# Fold the __init__ or __new__ methods into class documentation
+autoclass_content = "both"
+autodoc_class_signature = "mixed"
+# Workaround for autodoc_typehints_format not working for attributes
+# see https://github.com/sphinx-doc/sphinx/issues/10290#issuecomment-1079740009
+python_use_unqualified_type_names = True
+
+napoleon_numpy_docstring = True
 napoleon_google_docstring = False
 napoleon_use_param = False
 napoleon_use_ivar = True
+napoleon_use_rtype = False
+napoleon_preprocess_types = True
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
