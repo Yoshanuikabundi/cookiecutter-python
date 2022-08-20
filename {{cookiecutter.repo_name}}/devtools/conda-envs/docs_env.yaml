@@ -1,0 +1,25 @@
+name: docs
+channels:
+{% if cookiecutter.dependency_source == 'Prefer conda-forge over the default anaconda channel with pip fallback' %}
+  - conda-forge
+{% endif %}
+  - defaults
+dependencies:
+  # Base dependencies
+  - python =3.8
+  - pip
+
+  # Documentation dependencies
+  - sphinx >=5.0
+  - sphinx-notfound-page
+  - myst-parser
+  - sphinx_rtd_theme 
+
+{% if cookiecutter.dependency_source == 'Prefer default anaconda channel with pip fallback' %}
+  # Pip-only installs
+  - pip:
+{% else %}
+
+    # Pip-only installs
+  #- pip:
+{% endif %}
