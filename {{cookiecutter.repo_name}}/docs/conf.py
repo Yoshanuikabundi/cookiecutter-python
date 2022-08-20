@@ -51,6 +51,7 @@ extensions = [
     'sphinx.ext.intersphinx',
     'sphinx.ext.extlinks',
     "myst_parser",
+    "notfound.extension",
 ]
 
 autosummary_generate = True
@@ -91,29 +92,6 @@ myst_enable_extensions = [
     "dollarmath",
     "colon_fence",
 ]
-
-# sphinx-notfound-page
-# https://github.com/readthedocs/sphinx-notfound-page
-# Renders a 404 page with absolute links
-from importlib.util import find_spec as find_import_spec
-
-if find_import_spec("notfound"):
-    extensions.append("notfound.extension")
-
-    notfound_context = {
-        "title": "404: File Not Found",
-        "body": f"""
-    <h1>404: File Not Found</h1>
-    <p>
-        Sorry, we couldn't find that page. This often happens as a result of
-        following an outdated link. Please check the latest stable version
-        of the docs, unless you're sure you want an earlier version, and
-        try using the search box or the navigation menu on the left.
-    </p>
-    <p>
-    </p>
-    """,
-    }
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
