@@ -1,6 +1,9 @@
-# {{cookiecutter.project_name}}
-
-{{cookiecutter.description}}
+:::{include} ../README.md
+---
+relative-docs: docs/
+relative-images: True
+---
+:::
 
 :::{toctree}
 ---
