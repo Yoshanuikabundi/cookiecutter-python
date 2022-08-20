@@ -85,3 +85,21 @@ default-tag = "1.0.0"
 
 [tool.versioningit.write]
 file = "{{cookiecutter.repo_name}}/_version.py"
+
+[tool.soap.envs]
+docs = "devtools/conda-envs/docs_env.yaml"
+test = "devtools/conda-envs/test_env.yaml"
+
+[tool.soap.aliases.docs]
+cmd = "sphinx-build -j auto docs docs/_build/html"
+chdir = true
+env = "docs"
+description = "Build the docs with Sphinx"
+passthrough_args = true
+
+[tool.soap.aliases.test]
+cmd = "pytest -n auto {{cookiecutter.repo_name}}/tests"
+chdir = true
+env = "test"
+description = "Run unit and regression tests with pytest"
+passthrough_args = true
