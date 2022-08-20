@@ -13,7 +13,7 @@ dependencies:
   - sphinx >=5.0
   - sphinx-notfound-page
   - myst-parser
-  - sphinx_rtd_theme 
+  - furo
 
 {% if cookiecutter.dependency_source == 'Prefer default anaconda channel with pip fallback' %}
   # Pip-only installs

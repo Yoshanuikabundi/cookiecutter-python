@@ -129,14 +129,23 @@ pygments_style = "default"
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = "sphinx_rtd_theme"
+html_theme = "furo"
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
 # documentation.
-#
-# html_theme_options = {}
 
+html_theme_options = {
+    # Colour variable names:
+    # https://github.com/pradyunsg/furo/blob/main/src/furo/assets/styles/variables/_colors.scss
+    # Most variables in dark mode are inherited from light mode
+    "light_css_variables": {
+        "color-brand-primary": "#4b98e6",
+        "color-brand-content": "#CC3333",
+        "font-stack": "'Open Sans', sans-serif",
+        "font-stack--monospace": "Cousine, monospace",
+    },
+}
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
