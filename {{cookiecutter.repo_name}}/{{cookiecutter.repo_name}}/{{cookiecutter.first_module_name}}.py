@@ -4,7 +4,7 @@ __all__ = [
     "canvas",
 ]
 
-def canvas(with_attribution=True):
+def canvas(with_attribution: bool = True) -> str:
     """
     Placeholder function to show example docstring (NumPy format).
 

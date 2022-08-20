@@ -89,3 +89,8 @@ jobs:
           file: ./coverage.xml
           flags: unittests
           name: codecov-{{ '${{ matrix.os }}' }}-py{{ '${{ matrix.python-version }}' }}
+
+      - name: PyRight
+        uses: jakebailey/pyright-action@v1
+        with:
+          verify-types: {{ cookiecutter.repo_name }}
