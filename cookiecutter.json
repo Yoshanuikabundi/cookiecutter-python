@@ -1,7 +1,7 @@
 {
     "project_name": "ProjectName",
     "repo_name": "{{ cookiecutter.project_name.lower().replace(' ', '_') }}",
-    "first_module_name": "{{ cookiecutter.repo_name.lower().replace(' ', '_') }}",
+    "first_module_name": "_{{ cookiecutter.repo_name.lower().replace(' ', '_') }}",
     "author_name": "Your name (or your organization/company/team)",
     "author_email": "Your email (or your organization/company/team)",
     "github_username": "The username or organization this repo will be found in",
