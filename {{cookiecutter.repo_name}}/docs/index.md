@@ -33,9 +33,3 @@ so we must use eval-rst here
 
     </div>
 :::
-
-# Indices and tables
-
-- [](genindex)
-- [](modindex)
-- [](search)
